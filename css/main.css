@@ -18,9 +18,18 @@ body {
     font-weight: 400;
 }
 
+/* Personalización del Header*/
 .header {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+}
+
+.header>a{
+    margin-left: 5em;
+}
+
+.header>nav{
+    margin-right: 5em;
 }
 
 .src-only {
@@ -64,6 +73,10 @@ p{
 }
 
 /* Big area */
+.big-hero{
+    margin-top: 7em;
+}
+
 .big-hero img {
     width: 150px;
 }
@@ -76,7 +89,7 @@ p{
 }
 
 .big-hero p {
-    font-size: 0.7em;;
+    font-size: 0.8em;;
     color: #D7DEE6;
 }
 
@@ -123,7 +136,7 @@ a.hide-mobile{
 /*----------PENDIENTE----------*/
 .post{
     padding: 1em;
-    margin-bottom: -2px;
+    padding: 2em 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -181,7 +194,7 @@ a.hide-mobile{
 
 /* About */
 .about{
-    margin: 1em 0;
+    margin-top: 2em;
 }
 
 .about.container{
@@ -191,7 +204,7 @@ a.hide-mobile{
 .about .container{
     width: 100%;
     display: grid;
-    grid-template: repeat(2, auto) / repeat(2, 1fr);
+    grid-template: repeat(2, auto) / repeat(2, 50%);
     align-items: center;
 }
 
@@ -200,11 +213,10 @@ a.hide-mobile{
     font-weight: 700;
     font-size: 1.125em;
     grid-area: span 1 / span 2;
-    margin-top: 2em;
 }
 
 .bio-info{
-    padding-left: 4em;
+    margin: 0 10% 0 20%;
 }
 
 .bio-info img{
@@ -212,7 +224,7 @@ a.hide-mobile{
 }
 
 .bio-info p{
-    font-size: 16px;
+    font-size: 0.9em;
     padding: 2em;
     text-align: left;
     line-height: 25px;
@@ -223,7 +235,7 @@ a.hide-mobile{
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 3em 7em;
+    margin: 5%;
 }
 
 .contact * + *{
@@ -235,12 +247,16 @@ a.hide-mobile{
     flex-direction: column;
 }
 
+.contact-form label{
+    font-size: 1em;
+}
+
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
     border-radius: 0px 2em;
-    font-size: 1em;
-    width: 100%;
+    font-size: 0.9em;
+    width: 75%;
 }
 
 /* Decorando placeholder */
@@ -259,8 +275,8 @@ a.hide-mobile{
     background-color: #F74442;
     font-weight: 400;
     color: white;
-    font-size: 1rem;
-    width: 50%;
+    font-size: 1em;
+    width: 30%;
 }
 
 .black-decoration{
@@ -356,9 +372,9 @@ footer .social-links{
 @media only screen and (min-width: 1440px){
 
     /*TODO: FALTA CSS*/
-    .container{
-        /* width: 80%;
+    /* .container{
+        width: 80%;
         margin: 0 auto;
-        max-width: 1440px; */
-    }
+        max-width: 1440px; 
+    }*/
 }
