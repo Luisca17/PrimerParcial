@@ -120,18 +120,21 @@ a.hide-mobile{
     background-color: #0AC693;
 }
 
+/*----------PENDIENTE----------*/
 .post{
     padding: 1em;
     margin-bottom: -2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-/*---------------CONTINUAR DESDE AQUI---------------*/
 .post h2{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
     margin: 1em;
-    grid-area: 1 / span 3;
+    width: 100%;
 }
 
 .post ul{
@@ -141,9 +144,8 @@ a.hide-mobile{
 .post ul li{
     min-height: 300px;
     max-width: 350px;
-    margin: 2rem auto;
-    display: flex;
-    justify-content: space-between;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
 .post ul li article{
@@ -178,16 +180,31 @@ a.hide-mobile{
 }
 
 /* About */
-
 .about{
-    margin-top: 2em;
+    margin: 1em 0;
+}
+
+.about.container{
+    margin: 0 0;
+}
+
+.about .container{
+    width: 100%;
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+    align-items: center;
 }
 
 .about h2{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
-    margin: 2em;
+    grid-area: span 1 / span 2;
+    margin-top: 2em;
+}
+
+.bio-info{
+    padding-left: 4em;
 }
 
 .bio-info img{
@@ -206,7 +223,7 @@ a.hide-mobile{
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 0px 1em;
+    padding: 3em 7em;
 }
 
 .contact * + *{
@@ -243,6 +260,7 @@ a.hide-mobile{
     font-weight: 400;
     color: white;
     font-size: 1rem;
+    width: 50%;
 }
 
 .black-decoration{
@@ -256,6 +274,7 @@ footer{
 
 footer .social-links{
     margin: 0;
+    padding-top: 2em;
 }
 
 .menu{
@@ -325,9 +344,6 @@ footer .social-links{
         margin-top: 1em;
     }
 
-
-
-
     /*TODO: FALTA CSS */
 } 
 
@@ -335,16 +351,14 @@ footer .social-links{
 
        /*TODO: FALTA CSS */
 
-
-
 }
 
 @media only screen and (min-width: 1440px){
 
-    /*TODO: FALTA CSS */
+    /*TODO: FALTA CSS*/
     .container{
-        width: 80%;
+        /* width: 80%;
         margin: 0 auto;
-        max-width: 1440px;
+        max-width: 1440px; */
     }
 }
