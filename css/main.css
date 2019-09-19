@@ -310,6 +310,7 @@ footer .social-links{
     text-align: left;
     padding: 1em;
 }
+
 .menu li{
     display: block;
     padding: 0.5em;
@@ -321,9 +322,52 @@ footer .social-links{
     text-decoration: none;
 }
 
-/* Pesonalizando estilo para tablets*/
+/* Pesonalizando estilo para tablets y celulares*/
+
+@media only screen and (min-width: 414px){
+
+    .header>nav {
+        margin-right: 0;
+    }
+
+    .header>a {
+        margin-left: 0;
+    }
+
+    .contact{
+        margin: 10%;
+        margin-top: 0;
+    }
+
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        max-width: 414px; 
+    }
+    
+    .bio-info p{
+        margin: 5% 10%;
+    }
+
+    .container .bio-info{
+        width: 100%;
+    }
+
+    .container .contact{
+        width: 100%;
+    }
+
+    .contact-form input[type=submit]{
+        width: 70%;
+    }
+}
+
 @media only screen and (min-width: 768px){
-  
+
+    .header>a{
+        margin-left: 0;
+    }
+
     .post ul{
         width: 100%;
         list-style: none;
@@ -363,23 +407,94 @@ footer .social-links{
 
     .contact{
         margin: 5% 10%;
+        margin-top: 0;
     }
-    /*TODO: FALTA CSS */
+
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        max-width: 768px; 
+    }
+
+    .bio-info p{
+        margin: 5% 10%;
+    }
+
+    .container .bio-info{
+        width: 100%;
+    }
+
+    .container .contact{
+        width: 100%;
+    }
+
+    .contact-form input[type=submit]{
+        width: 70%;
+    }
 } 
 
 @media only screen and (min-width: 1024px){
 
-       /*TODO: FALTA CSS */
+    .header>nav {
+        margin-right: 0;
+    }
 
+    .contact{
+        margin: 5% 10%;
+    }
+
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1024px; 
+    }
+
+    .container .bio-info{
+        width: 50%;
+    }
+
+    .bio-info p{
+        margin: 10%;
+    }
+
+    .container .contact{
+        width: 30%;
+    }
+
+    .contact-form input[type=submit]{
+        width: 50%;
+    }
 }
 
 @media only screen and (min-width: 1440px){
 
-    /*TODO: FALTA CSS*/
+    .header>nav {
+        margin-right: 0;
+    }
+
+    .contact{
+        margin: 5% 10%;
+    }
 
     .container{
         width: 80%;
         margin: 0 auto;
         max-width: 1440px; 
+    }
+
+    .container .bio-info{
+        width: 50%;
+    }
+
+    .bio-info p{
+        margin: 10%;
+    }
+
+    .container .contact{
+        width: 30%;
+    }
+
+    .contact-form input[type=submit]{
+        width: 50%;
     }
 }
