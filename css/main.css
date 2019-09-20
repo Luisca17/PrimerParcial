@@ -1,8 +1,7 @@
+/* El CSS siguiente esta pensando primero para moviles y luego para Escritiorio */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
-/* El CSS siguiente esta pensando primero para moviles y luego para 
-   Escritiorio*/
-
+/* Global */
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -18,6 +17,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: 400;
+}
+
+p{
+    font-size: 0.7em;
+    padding: 2rem;
+    line-height: 25px;
 }
 
 /* Header */
@@ -38,23 +43,18 @@ body {
     display: none;
 }
 
-.menu a:hover{
-    color: #F74442;
+.logo {
+    width: 90px;
+    margin: 1em;
 }
 
+/* Navegation Bar */
 .hide-mobile {
     display: none;
 }
 
-p{
-    font-size: 0.7em;
-    padding: 2rem;
-    line-height: 25px;
-}
-
-.logo {
-    width: 90px;
-    margin: 1em;
+.menu a:hover{
+    color: #F74442;
 }
 
 .options {
@@ -74,7 +74,35 @@ p{
     font-size: 1.6rem;
 }
 
-/* Big area */
+/* Menu */
+.menu{
+    background-color: #112935;
+    position: absolute;
+    z-index: 20;
+    top: 60px;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+}
+
+.menu{
+    list-style: none;
+    text-align: left;
+    padding: 1em;
+}
+
+.menu li{
+    display: block;
+    padding: 0.5em;
+    margin-top: 5px;
+}
+
+.menu li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Big Area */
 .big-hero{
     margin: 7em 0;
 }
@@ -95,6 +123,7 @@ p{
     color: #D7DEE6;
 }
 
+/* Iconos */
 i.fab{
     font-size: calc(1.8em + 1vh);
     display: flex;
@@ -131,11 +160,13 @@ a.hide-mobile{
     padding-left: 0.3em;
 }
 
+/* Green Area */
 .green-area{
     width: 100%;
     background-color: #0AC693;
 }
 
+/* Posts */
 .post{
     padding: 2em 0;
     display: flex;
@@ -194,7 +225,6 @@ a.hide-mobile{
 }
 
 /* About */
-
 .about.container{
     margin: 0 0;
 }
@@ -214,6 +244,7 @@ a.hide-mobile{
     justify-content: center;
 }
 
+/* Bio Info */
 .bio-info{
     width: 50%;
     justify-content: flex-start;
@@ -233,6 +264,7 @@ a.hide-mobile{
     margin: 10%;
 }
 
+/* Contacto */
 .contact{
     width: 30%;
     display: flex;
@@ -262,7 +294,6 @@ a.hide-mobile{
 }
 
 /* Decorando placeholder */
-
 ::-webkit-input-placeholde{ 
     color: #D7DEE6; 
 } 
@@ -285,6 +316,7 @@ a.hide-mobile{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
+/* Footer */
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
@@ -295,37 +327,10 @@ footer .social-links{
     padding-top: 2em;
 }
 
-.menu{
-    background-color: #112935;
-    position: absolute;
-    z-index: 20;
-    top: 60px;
-    right: 0;
-    width: 100vw;
-    height: calc(100vh - 60px);
-}
-
-.menu{
-    list-style: none;
-    text-align: left;
-    padding: 1em;
-}
-
-.menu li{
-    display: block;
-    padding: 0.5em;
-    margin-top: 5px;
-}
-
-.menu li a{
-    color: white;
-    text-decoration: none;
-}
-
-/* Pesonalizando estilo para tablets y celulares*/
-
+/* Pesonalizando estilo para tablets y celulares */
 @media only screen and (min-width: 414px){
 
+    /* Header */
     .header>nav {
         margin-right: 0;
     }
@@ -334,17 +339,14 @@ footer .social-links{
         margin-left: 0;
     }
 
-    .contact{
-        margin: 10%;
-        margin-top: 0;
-    }
-
+    /* Big Area */
     .container{
         width: 80%;
         margin: 0 auto;
         max-width: 414px; 
     }
-    
+
+    /* Bio Info */
     .bio-info p{
         margin: 5% 10%;
     }
@@ -353,21 +355,53 @@ footer .social-links{
         width: 100%;
     }
 
-    .container .contact{
-        width: 100%;
+    /* Contacto */
+    .contact{
+        margin: 10%;
+        margin-top: 0;
     }
 
     .contact-form input[type=submit]{
         width: 70%;
     }
+
+    .container .contact{
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 768px){
 
+    /* Header */
     .header>a{
         margin-left: 0;
     }
 
+    .show-desktop{
+        display: block;
+    }
+
+    .hide-desktop{
+        display: none;
+    }
+
+    .logo{
+        width: 10em;
+        margin: 1.5em;
+    }
+
+    /* Menu */
+    .menu{
+        background-color: #112935; 
+        position: static;
+        z-index: 20;
+        width: auto;
+        height: auto;
+        display: flex;
+        margin-top: 1em;
+    }
+
+    /* Posts */
     .post ul{
         width: 100%;
         list-style: none;
@@ -382,46 +416,26 @@ footer .social-links{
         flex: 1 0 300px;
     }
 
-    .logo{
-        width: 10em;
-        margin: 1.5em;
-    }
-
-    .show-desktop{
-        display: block;
-    }
-
-    .hide-desktop{
-        display: none;
-    }
-
-    .menu{
-        background-color: #112935; 
-        position: static;
-        z-index: 20;
-        width: auto;
-        height: auto;
-        display: flex;
-        margin-top: 1em;
-    }
-
-    .contact{
-        margin: 5% 10%;
-        margin-top: 0;
-    }
-
+    /* Big Area */
     .container{
         width: 80%;
         margin: 0 auto;
         max-width: 768px; 
     }
 
+    /* Bio Info */
     .bio-info p{
         margin: 5% 10%;
     }
 
     .container .bio-info{
         width: 100%;
+    }
+
+    /* Contacto */
+    .contact{
+        margin: 5% 10%;
+        margin-top: 0;
     }
 
     .container .contact{
@@ -435,26 +449,30 @@ footer .social-links{
 
 @media only screen and (min-width: 1024px){
 
+    /* Header */
     .header>nav {
         margin-right: 0;
     }
 
-    .contact{
-        margin: 5% 10%;
-    }
-
+    /* Big Area */
     .container{
         width: 80%;
         margin: 0 auto;
         max-width: 1024px; 
     }
 
+    /* Bio Info */
     .container .bio-info{
         width: 50%;
     }
 
     .bio-info p{
         margin: 10%;
+    }
+
+    /* Contacto */
+    .contact{
+        margin: 5% 10%;
     }
 
     .container .contact{
@@ -468,26 +486,30 @@ footer .social-links{
 
 @media only screen and (min-width: 1440px){
 
+    /* Header */
     .header>nav {
         margin-right: 0;
     }
 
-    .contact{
-        margin: 5% 10%;
-    }
-
+    /* Big Area */
     .container{
         width: 80%;
         margin: 0 auto;
         max-width: 1440px; 
     }
 
+    /* Bio Info */
     .container .bio-info{
         width: 50%;
     }
 
     .bio-info p{
         margin: 10%;
+    }
+
+    /* Contacto */
+    .contact{
+        margin: 5% 10%;
     }
 
     .container .contact{
